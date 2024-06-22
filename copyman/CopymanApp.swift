@@ -1,17 +1,13 @@
-//
-//  copymanApp.swift
-//  copyman
-//
-//  Created by ANDREY VORONTSOV on 22.06.2024.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
-struct copymanApp: App {
+struct CopymanApp: App {
+    @State var theme = Theme.shared
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
+            Tag.self,
             Item.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
@@ -26,6 +22,7 @@ struct copymanApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(theme)
         }
         .modelContainer(sharedModelContainer)
     }

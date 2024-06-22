@@ -7,7 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80FC450A2C26F9630074EAA4 /* copymanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC45092C26F9630074EAA4 /* copymanApp.swift */; };
+		80B8B3102C28826D008D7471 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B30F2C28826D008D7471 /* Tag.swift */; };
+		80B8B3172C2884F1008D7471 /* ValidationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3162C2884F1008D7471 /* ValidationModifier.swift */; };
+		80B8B31A2C288515008D7471 /* CustomRoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3192C288515008D7471 /* CustomRoundedBorderTextField.swift */; };
+		80B8B31C2C28853C008D7471 /* CustomRoundedBorderTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B31B2C28853C008D7471 /* CustomRoundedBorderTextFieldStyle.swift */; };
+		80B8B31E2C288567008D7471 /* ValidatableRoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B31D2C288567008D7471 /* ValidatableRoundedBorderTextField.swift */; };
+		80B8B3212C28859B008D7471 /* Paddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3202C28859B008D7471 /* Paddings.swift */; };
+		80B8B3242C2885FB008D7471 /* StyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3232C2885FB008D7471 /* StyledText.swift */; };
+		80B8B3262C28864E008D7471 /* TextModelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3252C28864E008D7471 /* TextModelStyle.swift */; };
+		80B8B3282C2886E3008D7471 /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3272C2886E3008D7471 /* AddItemSheet.swift */; };
+		80B8B32A2C2887B4008D7471 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3292C2887B4008D7471 /* AddItemViewModel.swift */; };
+		80B8B32D2C28885C008D7471 /* ClosableSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B32C2C28885C008D7471 /* ClosableSheet.swift */; };
+		80B8B3302C28892D008D7471 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B32F2C28892D008D7471 /* Theme.swift */; };
+		80B8B3322C288968008D7471 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3312C288968008D7471 /* ColorScheme.swift */; };
+		80B8B3352C288A7C008D7471 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3342C288A7C008D7471 /* CapsuleButton.swift */; };
+		80B8B3372C288ACC008D7471 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3362C288ACC008D7471 /* CapsuleButtonStyle.swift */; };
+		80B8B33A2C288B1B008D7471 /* EdgeInsets+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3392C288B1B008D7471 /* EdgeInsets+init.swift */; };
+		80B8B33C2C288B68008D7471 /* FocusedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B33B2C288B68008D7471 /* FocusedModifier.swift */; };
+		80B8B33E2C288BCC008D7471 /* ThemeApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B33D2C288BCC008D7471 /* ThemeApplier.swift */; };
+		80B8B3412C288CBB008D7471 /* Color+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3402C288CBB008D7471 /* Color+RawRepresentable.swift */; };
+		80B8B3442C288D55008D7471 /* View+squared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3432C288D55008D7471 /* View+squared.swift */; };
+		80B8B3482C28905D008D7471 /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3472C28905D008D7471 /* SchemaV1.swift */; };
+		80B8B34B2C289284008D7471 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B34A2C289284008D7471 /* ItemView.swift */; };
+		80B8B34F2C28A01B008D7471 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B34E2C28A01B008D7471 /* TagLayout.swift */; };
+		80B8B3512C28A085008D7471 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3502C28A085008D7471 /* CheckboxToggleStyle.swift */; };
+		80B8B3532C28A402008D7471 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3522C28A402008D7471 /* ItemViewModel.swift */; };
+		80B8B3562C28A799008D7471 /* ConfirmationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3552C28A799008D7471 /* ConfirmationAlert.swift */; };
+		80B8B3592C28A7C8008D7471 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 80B8B3582C28A7C8008D7471 /* AlertToast */; };
+		80B8B35C2C28ADC3008D7471 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B35B2C28ADC3008D7471 /* HapticManager.swift */; };
+		80B8B35E2C28B04A008D7471 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B35D2C28B04A008D7471 /* SettingsView.swift */; };
+		80FC450A2C26F9630074EAA4 /* CopymanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC45092C26F9630074EAA4 /* CopymanApp.swift */; };
 		80FC450C2C26F9630074EAA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC450B2C26F9630074EAA4 /* ContentView.swift */; };
 		80FC450E2C26F9630074EAA4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC450D2C26F9630074EAA4 /* Item.swift */; };
 		80FC45102C26F9640074EAA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FC450F2C26F9640074EAA4 /* Assets.xcassets */; };
@@ -35,8 +64,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80B8B30C2C28805B008D7471 /* copyman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = copyman.entitlements; sourceTree = "<group>"; };
+		80B8B30D2C288127008D7471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		80B8B30F2C28826D008D7471 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		80B8B3162C2884F1008D7471 /* ValidationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModifier.swift; sourceTree = "<group>"; };
+		80B8B3192C288515008D7471 /* CustomRoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedBorderTextField.swift; sourceTree = "<group>"; };
+		80B8B31B2C28853C008D7471 /* CustomRoundedBorderTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedBorderTextFieldStyle.swift; sourceTree = "<group>"; };
+		80B8B31D2C288567008D7471 /* ValidatableRoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableRoundedBorderTextField.swift; sourceTree = "<group>"; };
+		80B8B3202C28859B008D7471 /* Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paddings.swift; sourceTree = "<group>"; };
+		80B8B3232C2885FB008D7471 /* StyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledText.swift; sourceTree = "<group>"; };
+		80B8B3252C28864E008D7471 /* TextModelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModelStyle.swift; sourceTree = "<group>"; };
+		80B8B3272C2886E3008D7471 /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
+		80B8B3292C2887B4008D7471 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		80B8B32C2C28885C008D7471 /* ClosableSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosableSheet.swift; sourceTree = "<group>"; };
+		80B8B32F2C28892D008D7471 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		80B8B3312C288968008D7471 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		80B8B3342C288A7C008D7471 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
+		80B8B3362C288ACC008D7471 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		80B8B3392C288B1B008D7471 /* EdgeInsets+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+init.swift"; sourceTree = "<group>"; };
+		80B8B33B2C288B68008D7471 /* FocusedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedModifier.swift; sourceTree = "<group>"; };
+		80B8B33D2C288BCC008D7471 /* ThemeApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeApplier.swift; sourceTree = "<group>"; };
+		80B8B3402C288CBB008D7471 /* Color+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+RawRepresentable.swift"; sourceTree = "<group>"; };
+		80B8B3432C288D55008D7471 /* View+squared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+squared.swift"; sourceTree = "<group>"; };
+		80B8B3472C28905D008D7471 /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
+		80B8B34A2C289284008D7471 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		80B8B34E2C28A01B008D7471 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
+		80B8B3502C28A085008D7471 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		80B8B3522C28A402008D7471 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		80B8B3552C28A799008D7471 /* ConfirmationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlert.swift; sourceTree = "<group>"; };
+		80B8B35B2C28ADC3008D7471 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		80B8B35D2C28B04A008D7471 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		80FC45062C26F9630074EAA4 /* copyman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = copyman.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		80FC45092C26F9630074EAA4 /* copymanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = copymanApp.swift; sourceTree = "<group>"; };
+		80FC45092C26F9630074EAA4 /* CopymanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopymanApp.swift; sourceTree = "<group>"; };
 		80FC450B2C26F9630074EAA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80FC450D2C26F9630074EAA4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		80FC450F2C26F9640074EAA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B8B3592C28A7C8008D7471 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +133,198 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80B8B30E2C288244008D7471 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3452C288DC9008D7471 /* V1 */,
+				80FC450D2C26F9630074EAA4 /* Item.swift */,
+				80B8B30F2C28826D008D7471 /* Tag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		80B8B3112C288476008D7471 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B35A2C28ADB7008D7471 /* System */,
+				80B8B3462C288DDF008D7471 /* Routing */,
+				80B8B3142C2884D1008D7471 /* Views */,
+				80B8B3132C28848F008D7471 /* Settings */,
+				80B8B3122C288482008D7471 /* Splash */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		80B8B3122C288482008D7471 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		80B8B3132C28848F008D7471 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B35D2C28B04A008D7471 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		80B8B3142C2884D1008D7471 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3542C28A791008D7471 /* Alert */,
+				80B8B34D2C28A00D008D7471 /* Layout */,
+				80B8B34C2C289FE0008D7471 /* Toggle */,
+				80B8B3422C288D47008D7471 /* View */,
+				80B8B33F2C288CA2008D7471 /* Color */,
+				80B8B3382C288B09008D7471 /* EdgeInsets */,
+				80B8B3332C288A71008D7471 /* Button */,
+				80B8B32E2C28887A008D7471 /* Theme */,
+				80B8B32B2C28884C008D7471 /* Sheet */,
+				80B8B3222C2885EC008D7471 /* Text */,
+				80B8B31F2C28857A008D7471 /* Paddings */,
+				80B8B3152C2884DF008D7471 /* Input */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80B8B3152C2884DF008D7471 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3162C2884F1008D7471 /* ValidationModifier.swift */,
+				80B8B3192C288515008D7471 /* CustomRoundedBorderTextField.swift */,
+				80B8B31B2C28853C008D7471 /* CustomRoundedBorderTextFieldStyle.swift */,
+				80B8B31D2C288567008D7471 /* ValidatableRoundedBorderTextField.swift */,
+				80B8B33B2C288B68008D7471 /* FocusedModifier.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		80B8B31F2C28857A008D7471 /* Paddings */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3202C28859B008D7471 /* Paddings.swift */,
+			);
+			path = Paddings;
+			sourceTree = "<group>";
+		};
+		80B8B3222C2885EC008D7471 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3232C2885FB008D7471 /* StyledText.swift */,
+				80B8B3252C28864E008D7471 /* TextModelStyle.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		80B8B32B2C28884C008D7471 /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B32C2C28885C008D7471 /* ClosableSheet.swift */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
+		80B8B32E2C28887A008D7471 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B32F2C28892D008D7471 /* Theme.swift */,
+				80B8B3312C288968008D7471 /* ColorScheme.swift */,
+				80B8B33D2C288BCC008D7471 /* ThemeApplier.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		80B8B3332C288A71008D7471 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3342C288A7C008D7471 /* CapsuleButton.swift */,
+				80B8B3362C288ACC008D7471 /* CapsuleButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		80B8B3382C288B09008D7471 /* EdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3392C288B1B008D7471 /* EdgeInsets+init.swift */,
+			);
+			path = EdgeInsets;
+			sourceTree = "<group>";
+		};
+		80B8B33F2C288CA2008D7471 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3402C288CBB008D7471 /* Color+RawRepresentable.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		80B8B3422C288D47008D7471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3432C288D55008D7471 /* View+squared.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80B8B3452C288DC9008D7471 /* V1 */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3472C28905D008D7471 /* SchemaV1.swift */,
+			);
+			path = V1;
+			sourceTree = "<group>";
+		};
+		80B8B3462C288DDF008D7471 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		80B8B3492C289275008D7471 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B34A2C289284008D7471 /* ItemView.swift */,
+				80B8B3522C28A402008D7471 /* ItemViewModel.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		80B8B34C2C289FE0008D7471 /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3502C28A085008D7471 /* CheckboxToggleStyle.swift */,
+			);
+			path = Toggle;
+			sourceTree = "<group>";
+		};
+		80B8B34D2C28A00D008D7471 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B34E2C28A01B008D7471 /* TagLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		80B8B3542C28A791008D7471 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B3552C28A799008D7471 /* ConfirmationAlert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		80B8B35A2C28ADB7008D7471 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				80B8B35B2C28ADC3008D7471 /* HapticManager.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		80FC44FD2C26F9630074EAA4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +348,17 @@
 		80FC45082C26F9630074EAA4 /* copyman */ = {
 			isa = PBXGroup;
 			children = (
-				80FC45092C26F9630074EAA4 /* copymanApp.swift */,
+				80B8B3492C289275008D7471 /* Items */,
+				80B8B3112C288476008D7471 /* App */,
+				80B8B30E2C288244008D7471 /* Models */,
+				80B8B30D2C288127008D7471 /* Info.plist */,
+				80B8B30C2C28805B008D7471 /* copyman.entitlements */,
+				80FC45092C26F9630074EAA4 /* CopymanApp.swift */,
 				80FC450B2C26F9630074EAA4 /* ContentView.swift */,
-				80FC450D2C26F9630074EAA4 /* Item.swift */,
 				80FC450F2C26F9640074EAA4 /* Assets.xcassets */,
 				80FC45112C26F9640074EAA4 /* Preview Content */,
+				80B8B3272C2886E3008D7471 /* AddItemSheet.swift */,
+				80B8B3292C2887B4008D7471 /* AddItemViewModel.swift */,
 			);
 			path = copyman;
 			sourceTree = "<group>";
@@ -146,6 +404,9 @@
 			dependencies = (
 			);
 			name = copyman;
+			packageProductDependencies = (
+				80B8B3582C28A7C8008D7471 /* AlertToast */,
+			);
 			productName = copyman;
 			productReference = 80FC45062C26F9630074EAA4 /* copyman.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +479,9 @@
 				Base,
 			);
 			mainGroup = 80FC44FD2C26F9630074EAA4;
+			packageReferences = (
+				80B8B3572C28A7C8008D7471 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = 80FC45072C26F9630074EAA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,9 +524,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B8B3322C288968008D7471 /* ColorScheme.swift in Sources */,
+				80B8B3372C288ACC008D7471 /* CapsuleButtonStyle.swift in Sources */,
+				80B8B31A2C288515008D7471 /* CustomRoundedBorderTextField.swift in Sources */,
+				80B8B3102C28826D008D7471 /* Tag.swift in Sources */,
+				80B8B3352C288A7C008D7471 /* CapsuleButton.swift in Sources */,
+				80B8B3282C2886E3008D7471 /* AddItemSheet.swift in Sources */,
+				80B8B31C2C28853C008D7471 /* CustomRoundedBorderTextFieldStyle.swift in Sources */,
+				80B8B31E2C288567008D7471 /* ValidatableRoundedBorderTextField.swift in Sources */,
+				80B8B34B2C289284008D7471 /* ItemView.swift in Sources */,
+				80B8B33C2C288B68008D7471 /* FocusedModifier.swift in Sources */,
+				80B8B3482C28905D008D7471 /* SchemaV1.swift in Sources */,
+				80B8B3172C2884F1008D7471 /* ValidationModifier.swift in Sources */,
+				80B8B32D2C28885C008D7471 /* ClosableSheet.swift in Sources */,
 				80FC450C2C26F9630074EAA4 /* ContentView.swift in Sources */,
+				80B8B3212C28859B008D7471 /* Paddings.swift in Sources */,
 				80FC450E2C26F9630074EAA4 /* Item.swift in Sources */,
-				80FC450A2C26F9630074EAA4 /* copymanApp.swift in Sources */,
+				80B8B35C2C28ADC3008D7471 /* HapticManager.swift in Sources */,
+				80B8B33A2C288B1B008D7471 /* EdgeInsets+init.swift in Sources */,
+				80B8B3532C28A402008D7471 /* ItemViewModel.swift in Sources */,
+				80B8B3562C28A799008D7471 /* ConfirmationAlert.swift in Sources */,
+				80FC450A2C26F9630074EAA4 /* CopymanApp.swift in Sources */,
+				80B8B33E2C288BCC008D7471 /* ThemeApplier.swift in Sources */,
+				80B8B3412C288CBB008D7471 /* Color+RawRepresentable.swift in Sources */,
+				80B8B34F2C28A01B008D7471 /* TagLayout.swift in Sources */,
+				80B8B3242C2885FB008D7471 /* StyledText.swift in Sources */,
+				80B8B3442C288D55008D7471 /* View+squared.swift in Sources */,
+				80B8B3302C28892D008D7471 /* Theme.swift in Sources */,
+				80B8B32A2C2887B4008D7471 /* AddItemViewModel.swift in Sources */,
+				80B8B3512C28A085008D7471 /* CheckboxToggleStyle.swift in Sources */,
+				80B8B35E2C28B04A008D7471 /* SettingsView.swift in Sources */,
+				80B8B3262C28864E008D7471 /* TextModelStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,12 +715,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = copyman/copyman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"copyman/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DZQ8R87XF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = copyman/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,12 +746,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = copyman/copyman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"copyman/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DZQ8R87XF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = copyman/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -592,6 +888,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80B8B3572C28A7C8008D7471 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80B8B3582C28A7C8008D7471 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80B8B3572C28A7C8008D7471 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80FC44FE2C26F9630074EAA4 /* Project object */;
 }
