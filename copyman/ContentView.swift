@@ -3,26 +3,53 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    
     @Query private var items: [Item]
     
     @State private var showAddItemSheet = false
     @State private var showingCopiedAlert = false
+    @State private var searchText = ""
+    
+    var filteredItems: [Item] {
+        if searchText.isEmpty {
+            return items
+        } else {
+            // TODO: Refactor; also add: `content` & `tag`
+            return items.filter { item in
+                if let title = item.title {
+                    return title.contains(searchText)
+                    
+                } else {
+                    return false
+                }
+            }
+        }
+    }
+    
+    // TODO: Add ContentUnavalableView for search results
 
     // TODO: Tags: favorites, links
+    // TODO: Add `pin view` to show all pins
     // TODO: Show tags view at the top (right below the toolbar)
     var body: some View {
         // TODO: Add Tag view
         NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    ItemView(item: item, copied: $showingCopiedAlert)
-                        .listRowSeparator(.hidden)
+            ScrollView {
+                VStack(spacing: 0) {
+                    ForEach(filteredItems) { item in
+                        ItemView(item: item, copied: $showingCopiedAlert)
+                            .padding(.horizontal, Padding.small)
+                            .padding(.bottom, Padding.small)
+                    }
+                    
                 }
-                .onDelete(perform: deleteItems)
             }
-            .listStyle(.plain)
+            .searchable(text: $searchText, prompt: "Search items")
+            .scrollIndicators(.hidden)
+            .frame(maxHeight: .infinity)
+            .toolbarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .principal) {
                     Text("Copyman")
                         .applyTextStyle(
                             model: FontStyleModel(
@@ -32,7 +59,7 @@ struct ContentView: View {
                             )
                         )
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     Button {
                         // TODO: Open settings sheet
                     } label: {
@@ -40,7 +67,7 @@ struct ContentView: View {
                     }
                 }
                 
-                ToolbarItem(placement: .bottomBar) {
+                ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showAddItemSheet.toggle()
                     } label: {
@@ -52,19 +79,6 @@ struct ContentView: View {
                         .labelStyle(.titleAndIcon)
                     }
                 }
-                
-//                ToolbarItem(placement: .bottomBar) {
-//                    // TODO: Show as [icon - title]
-//                    Button {
-//                        showAddItemSheet.toggle()
-//                    } label: {
-//                        Label(
-//                            title: { Text("Add Item") },
-//                            icon: { Image(systemName: "plus") }
-//                        )
-//                        .labelStyle(.titleAndIcon)
-//                    }
-//                }
             }
             .sheet(isPresented: $showAddItemSheet) {
                 AddItemSheet()
@@ -74,14 +88,13 @@ struct ContentView: View {
                 showing: $showingCopiedAlert
             )
             .safeAreaInset(edge: .top) {
-                VStack {
+                ZStack(alignment: .bottom) {
                     Text("Tags")
+                        .padding(Padding.medium)
                     
                     Divider()
-                        .padding(.horizontal, -Padding.medium)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(Padding.medium)
                 .background(Color.contentBackground)
             }
         } detail: {
