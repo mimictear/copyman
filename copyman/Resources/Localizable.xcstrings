@@ -1,0 +1,84 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "[link]" : {
+
+    },
+    "[secured]" : {
+
+    },
+    "Accent color" : {
+
+    },
+    "Add item" : {
+
+    },
+    "Add Item" : {
+
+    },
+    "Add new item" : {
+
+    },
+    "Add new tag" : {
+
+    },
+    "App Version %@" : {
+
+    },
+    "Are you sure you want to delete this item? This item will be deleted immediately. You can't undo this action." : {
+
+    },
+    "Copy" : {
+
+    },
+    "Copyman" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete \"%@\"" : {
+
+    },
+    "Edit" : {
+
+    },
+    "Filter Items" : {
+
+    },
+    "Link" : {
+
+    },
+    "New items you add will appear here." : {
+
+    },
+    "No Items" : {
+
+    },
+    "Pin" : {
+
+    },
+    "Pinned Items" : {
+
+    },
+    "Search items" : {
+
+    },
+    "Secured" : {
+
+    },
+    "Select an item" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Share" : {
+
+    },
+    "Unpin" : {
+
+    }
+  },
+  "version" : "1.0"
+}
