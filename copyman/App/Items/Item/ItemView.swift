@@ -6,9 +6,9 @@ struct ItemView: View {
     @Environment(\.openURL) private var openURL
     @Environment(\.modelContext) private var modelContext
     @Environment(Theme.self) private var theme
+    @Environment(RouterPath.self) private var routerPath
     
     @State private var viewModel = ItemViewModel()
-    @State private var showDeleteConfirmation = false
     @State private var revealSensitiveContent = false
     
     let item: Item
@@ -28,14 +28,9 @@ struct ItemView: View {
                         Image(systemName: "pin")
                             .font(.caption)
                     }
-                    
-//                    Button {
-//                        HapticManager.shared.fireHaptic(.buttonPress)
-//                        item.pinned.toggle()
-//                    } label: {
-//                        Image(systemName: item.pinned ? "pin.slash" : "pin")
-//                            .font(.caption)
-//                    }
+
+//                  HapticManager.shared.fireHaptic(.buttonPress)
+
                 }
                 .padding(.bottom, Padding.small)
                 
@@ -73,9 +68,9 @@ struct ItemView: View {
             HStack(spacing: 24) {
                 Spacer()
                 Button {
-                    viewModel.copyTextToClipboard(item.content!)
-                    HapticManager.shared.fireHaptic(.buttonPress)
-                    copied.toggle()
+                    if let content = item.content {
+                        viewModel.dispatch(event: .copy(content: content))
+                    }
                 } label: {
                     Image(systemName: "doc.on.doc")
                         .contentShape(Rectangle())
@@ -92,21 +87,13 @@ struct ItemView: View {
                         .dynamicTypeSize(.large)
                 }
                 .buttonStyle(.borderless)
-                
-                Menu {
-                    Button("Delete", role: .destructive) {
-                        showDeleteConfirmation.toggle()
-                    }
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                }
             }
             .withTopMediumPadding()
         }
         .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
             -100
         }
-        .sheet(isPresented: $showDeleteConfirmation) {
+        .sheet(isPresented: $viewModel.showDeleteConfirmation) {
             ItemDeletionConfirmationView(item: item) {
                 Task {
                     withAnimation {
@@ -118,7 +105,7 @@ struct ItemView: View {
                         }
                     }
                 }
-                showDeleteConfirmation = false
+                viewModel.showDeleteConfirmation = false
             }
         }
         .background {
@@ -133,28 +120,49 @@ struct ItemView: View {
         .onAppear {
             revealSensitiveContent = !item.secured
         }
+        .onChange(of: viewModel.event) { _, event in
+            switch event {
+            case .edit:
+                routerPath.presentedSheet = .edit
+            case let .pinOrUnpin(item):
+                HapticManager.shared.fireHaptic(.buttonPress)
+                item.pinned.toggle()
+            case .copy:
+                HapticManager.shared.fireHaptic(.buttonPress)
+                copied.toggle()
+            default: break
+            }
+            viewModel.dispatch(event: .idle)
+        }
         .animation(.easeInOut, value: revealSensitiveContent)
         .contextMenu {
             contextMenu
+                .environment(viewModel)
         }
         .swipeActions(edge: .trailing) {
             ItemRowSwipeView(mode: .trailing(action: .delete))
+                .environment(viewModel)
         }
-        
+        //.sensoryFeedback(.decrease, trigger: <#T##Equatable#>)
         .listRowBackground(theme.primaryBackgroundColor)
         .listRowInsets(.init(horizontal: Padding.medium, vertical: Padding.small))
     }
     
     @MainActor
     private var revealSensitiveContentButton: some View {
-        Image(systemName: revealSensitiveContent ? "eye.slash" : "eye")
-            .symbolRenderingMode(.hierarchical)
-            .foregroundStyle(.blue)
-            .symbolEffect(.bounce, value: revealSensitiveContent)
-            .onTapGesture {
-                HapticManager.shared.fireHaptic(.buttonPress)
-                revealSensitiveContent.toggle()
-            }
+        Button {
+            HapticManager.shared.fireHaptic(.buttonPress)
+            revealSensitiveContent.toggle()
+        } label: {
+            Image(systemName: revealSensitiveContent ? "eye.slash" : "eye")
+                .symbolRenderingMode(.hierarchical)
+                .foregroundStyle(.blue)
+                .contentShape(Rectangle())
+                .font(.body)
+                .dynamicTypeSize(.large)
+                .symbolEffect(.bounce, value: revealSensitiveContent)
+        }
+        .buttonStyle(.borderless)
     }
     
     private var contextMenu: some View {

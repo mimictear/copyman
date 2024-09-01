@@ -6,55 +6,50 @@ import AnticsUI
 struct ItemRowContextMenu: View {
     @Environment(\.displayScale) private var displayScale
     @Environment(\.openWindow) private var openWindow
-    @Environment(RouterPath.self) private var routerPath
+    @Environment(ItemViewModel.self) private var viewModel
     
     let item: Item
     
     var body: some View {
         Button {
-            Task {
-                HapticManager.shared.fireHaptic(.buttonPress)
-                item.pinned.toggle()
-            }
+            viewModel.dispatch(event: .pinOrUnpin(item: item))
         } label: {
             Label(item.pinned ? "Unpin" : "Pin",
                   systemImage: item.pinned ? "pin.slash" : "pin")
         }
         
         Button {
-            Task {
-
-            }
+            // TODO
         } label: {
-            Label("Share",
-                  systemImage: "square.and.arrow.up")
+            Label("Share", systemImage: "square.and.arrow.up")
         }
         
         Button {
-            Task {
-
+            if let content = item.content {
+                viewModel.dispatch(event: .copy(content: content))
             }
         } label: {
-            Label("Copy",
-                  systemImage: "doc.on.doc")
+            Label("Copy", systemImage: "doc.on.doc")
         }
         
         Divider()
         
         Button {
-            routerPath.presentedSheet = .edit
+            viewModel.dispatch(event: .edit)
         } label: {
-            Label("Edit",
-                  systemImage: "pencil")
+            Label("Edit", systemImage: "pencil")
         }
         
         Section {
             Button(role: .destructive) {
-                
+                Task.delayed(byTimeInterval: actionDelay) { @MainActor in
+                    viewModel.dispatch(event: .delete)
+                }
             } label: {
-                Label("Delete",
-                      systemImage: "xmark.bin")
+                Label("Delete", systemImage: "xmark.bin")
             }
         }
     }
 }
+
+private let actionDelay: TimeInterval = 0.35

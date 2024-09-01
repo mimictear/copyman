@@ -20,6 +20,8 @@ struct PinsView: View {
             EmptyView()
         } else {
             HStack {
+                totalPinnedCountView
+                
                 Group {
                     ScrollView(.horizontal) {
                         HStack {
@@ -47,6 +49,15 @@ struct PinsView: View {
                 }
                 .buttonStyle(.borderless)
             }
+        }
+    }
+    
+    @ViewBuilder
+    private var totalPinnedCountView: some View {
+        if pinnedItems.count > 1 {
+            Text("(\(pinnedItems.count))")
+        } else {
+            EmptyView()
         }
     }
 }

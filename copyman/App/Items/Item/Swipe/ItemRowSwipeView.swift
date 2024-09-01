@@ -1,8 +1,10 @@
+import Core
 import SwiftUI
 import AnticsUI
 
 struct ItemRowSwipeView: View {
     @Environment(Theme.self) private var theme
+    @Environment(ItemViewModel.self) private var viewModel
     
     enum Mode {
         case leading(action: ItemSwipeAction)
@@ -38,7 +40,7 @@ struct ItemRowSwipeView: View {
           EmptyView()
         case .delete:
             makeSwipeButtonForTask(action: .delete) {
-                // TODO
+                viewModel.dispatch(event: .delete)
             }
         default:
             EmptyView()
@@ -51,8 +53,8 @@ struct ItemRowSwipeView: View {
         task: @escaping () async -> Void
     ) -> some View {
         Button {
-            Task {
-                //HapticManager.shared.fireHaptic(.notification(.success))
+            Task.delayed(byTimeInterval: actionDelay) { @MainActor in
+                HapticManager.shared.fireHaptic(.notification(.success))
                 await task()
             }
         } label: {
@@ -69,3 +71,5 @@ struct ItemRowSwipeView: View {
 //        .environment(\.symbolVariants, .none)
     }
 }
+
+private let actionDelay: TimeInterval = 0.35

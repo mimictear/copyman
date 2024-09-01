@@ -12,7 +12,7 @@ public struct FitPresentationDetentsViewModifier: ViewModifier {
             content.readSize { size in
                 height = size.height.isNaN ? .zero : size.height
             }
-            Spacer(minLength: 0)
+            Spacer(minLength: .zero)
         }
         .presentationDetents([.height(height)])
     }
