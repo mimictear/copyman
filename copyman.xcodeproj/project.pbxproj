@@ -14,7 +14,6 @@
 		80376A902C3AF434008C011D /* RouterDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80376A8F2C3AF434008C011D /* RouterDestination.swift */; };
 		80376A922C3AF457008C011D /* SheetDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80376A912C3AF457008C011D /* SheetDestination.swift */; };
 		80376A972C3AFA2B008C011D /* RoutingRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80376A962C3AFA2B008C011D /* RoutingRegistry.swift */; };
-		8040EEE82C60C7EA009C63D3 /* ItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040EEE72C60C7EA009C63D3 /* ItemReducer.swift */; };
 		805051462C4D5D73000FF963 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 805051452C4D5D73000FF963 /* Localizable.xcstrings */; };
 		80B8B3102C28826D008D7471 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B30F2C28826D008D7471 /* Tag.swift */; };
 		80B8B3282C2886E3008D7471 /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3272C2886E3008D7471 /* AddItemSheet.swift */; };
@@ -68,7 +67,6 @@
 		80376A912C3AF457008C011D /* SheetDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDestination.swift; sourceTree = "<group>"; };
 		80376A962C3AFA2B008C011D /* RoutingRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingRegistry.swift; sourceTree = "<group>"; };
 		80376A992C3AFF4E008C011D /* AnticsUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AnticsUI; path = Packages/AnticsUI; sourceTree = "<group>"; };
-		8040EEE72C60C7EA009C63D3 /* ItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemReducer.swift; sourceTree = "<group>"; };
 		805051452C4D5D73000FF963 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		80B8B30C2C28805B008D7471 /* copyman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = copyman.entitlements; sourceTree = "<group>"; };
 		80B8B30D2C288127008D7471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				80376A842C3AD7EC008C011D /* Add */,
 				80B8B34A2C289284008D7471 /* ItemView.swift */,
 				80B8B3522C28A402008D7471 /* ItemViewModel.swift */,
-				8040EEE72C60C7EA009C63D3 /* ItemReducer.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -524,7 +521,6 @@
 				80376A882C3AD885008C011D /* ItemDeletionConfirmationView.swift in Sources */,
 				80B8B32A2C2887B4008D7471 /* AddItemViewModel.swift in Sources */,
 				80B8B35E2C28B04A008D7471 /* SettingsView.swift in Sources */,
-				8040EEE82C60C7EA009C63D3 /* ItemReducer.swift in Sources */,
 				80376A812C3ACCB7008C011D /* TagsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

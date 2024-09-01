@@ -163,6 +163,10 @@ struct ItemView: View {
                 .symbolEffect(.bounce, value: revealSensitiveContent)
         }
         .buttonStyle(.borderless)
+        .tappablePadding(.init(side: Padding.small)) {
+            HapticManager.shared.fireHaptic(.buttonPress)
+            revealSensitiveContent.toggle()
+        }
     }
     
     private var contextMenu: some View {
