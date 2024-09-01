@@ -10,6 +10,7 @@ extension View {
                 switch destination {
                 case .settings: SettingsView()
                 case .add: AddItemSheet()
+                case .addNewTag: AddNewTagView()
                 case .pins: AllPinsView()
                 case .filter, .edit: EmptyView()
                 }
