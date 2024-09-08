@@ -16,10 +16,12 @@
 		80376A972C3AFA2B008C011D /* RoutingRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80376A962C3AFA2B008C011D /* RoutingRegistry.swift */; };
 		805051462C4D5D73000FF963 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 805051452C4D5D73000FF963 /* Localizable.xcstrings */; };
 		80649C512C84C5B8008F1DFF /* AddNewTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80649C502C84C5B8008F1DFF /* AddNewTagView.swift */; };
+		80984B842C8DDF740034170C /* EditItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80984B832C8DDF740034170C /* EditItemSheet.swift */; };
+		80984B862C8DE0F20034170C /* ItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80984B852C8DE0F20034170C /* ItemOperation.swift */; };
+		80984B882C8DE31F0034170C /* ItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80984B872C8DE31F0034170C /* ItemSheet.swift */; };
 		80B8B3102C28826D008D7471 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B30F2C28826D008D7471 /* Tag.swift */; };
 		80B8B3282C2886E3008D7471 /* AddItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3272C2886E3008D7471 /* AddItemSheet.swift */; };
 		80B8B32A2C2887B4008D7471 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3292C2887B4008D7471 /* AddItemViewModel.swift */; };
-		80B8B3482C28905D008D7471 /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3472C28905D008D7471 /* SchemaV1.swift */; };
 		80B8B34B2C289284008D7471 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B34A2C289284008D7471 /* ItemView.swift */; };
 		80B8B3532C28A402008D7471 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B3522C28A402008D7471 /* ItemViewModel.swift */; };
 		80B8B35E2C28B04A008D7471 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8B35D2C28B04A008D7471 /* SettingsView.swift */; };
@@ -70,12 +72,14 @@
 		80376A992C3AFF4E008C011D /* AnticsUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AnticsUI; path = Packages/AnticsUI; sourceTree = "<group>"; };
 		805051452C4D5D73000FF963 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		80649C502C84C5B8008F1DFF /* AddNewTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTagView.swift; sourceTree = "<group>"; };
+		80984B832C8DDF740034170C /* EditItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemSheet.swift; sourceTree = "<group>"; };
+		80984B852C8DE0F20034170C /* ItemOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOperation.swift; sourceTree = "<group>"; };
+		80984B872C8DE31F0034170C /* ItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSheet.swift; sourceTree = "<group>"; };
 		80B8B30C2C28805B008D7471 /* copyman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = copyman.entitlements; sourceTree = "<group>"; };
 		80B8B30D2C288127008D7471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		80B8B30F2C28826D008D7471 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		80B8B3272C2886E3008D7471 /* AddItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheet.swift; sourceTree = "<group>"; };
 		80B8B3292C2887B4008D7471 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
-		80B8B3472C28905D008D7471 /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
 		80B8B34A2C289284008D7471 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		80B8B3522C28A402008D7471 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		80B8B35D2C28B04A008D7471 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				80376A842C3AD7EC008C011D /* Add */,
 				80B8B34A2C289284008D7471 /* ItemView.swift */,
 				80B8B3522C28A402008D7471 /* ItemViewModel.swift */,
+				80984B852C8DE0F20034170C /* ItemOperation.swift */,
+				80984B872C8DE31F0034170C /* ItemSheet.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 		80376A852C3AD7FB008C011D /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				80984B832C8DDF740034170C /* EditItemSheet.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -223,16 +230,8 @@
 				80376A7D2C3ACC5E008C011D /* Tags */,
 				80B8B3462C288DDF008D7471 /* Routing */,
 				80B8B3132C28848F008D7471 /* Settings */,
-				80B8B3122C288482008D7471 /* Splash */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		80B8B3122C288482008D7471 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		80B8B3132C28848F008D7471 /* Settings */ = {
@@ -246,7 +245,6 @@
 		80B8B3452C288DC9008D7471 /* V1 */ = {
 			isa = PBXGroup;
 			children = (
-				80B8B3472C28905D008D7471 /* SchemaV1.swift */,
 			);
 			path = V1;
 			sourceTree = "<group>";
@@ -512,8 +510,9 @@
 				80B8B34B2C289284008D7471 /* ItemView.swift in Sources */,
 				80C9AF752C5FFC3200CE2391 /* AllPinsView.swift in Sources */,
 				80376A7F2C3ACC6B008C011D /* TagView.swift in Sources */,
-				80B8B3482C28905D008D7471 /* SchemaV1.swift in Sources */,
+				80984B882C8DE31F0034170C /* ItemSheet.swift in Sources */,
 				80376A902C3AF434008C011D /* RouterDestination.swift in Sources */,
+				80984B862C8DE0F20034170C /* ItemOperation.swift in Sources */,
 				80FC450C2C26F9630074EAA4 /* ItemsView.swift in Sources */,
 				80C9AF692C5FCCA500CE2391 /* ItemRowContextMenu.swift in Sources */,
 				80FC450E2C26F9630074EAA4 /* Item.swift in Sources */,
@@ -523,6 +522,7 @@
 				80C9AF732C5FEC9700CE2391 /* PinsView.swift in Sources */,
 				80FC450A2C26F9630074EAA4 /* CopymanApp.swift in Sources */,
 				80376A882C3AD885008C011D /* ItemDeletionConfirmationView.swift in Sources */,
+				80984B842C8DDF740034170C /* EditItemSheet.swift in Sources */,
 				80B8B32A2C2887B4008D7471 /* AddItemViewModel.swift in Sources */,
 				80B8B35E2C28B04A008D7471 /* SettingsView.swift in Sources */,
 				80376A812C3ACCB7008C011D /* TagsView.swift in Sources */,
@@ -688,7 +688,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = copyman/copyman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"copyman/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DZQ8R87XF;
 				ENABLE_PREVIEWS = YES;
@@ -719,7 +719,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = copyman/copyman.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"copyman/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DZQ8R87XF;
 				ENABLE_PREVIEWS = YES;

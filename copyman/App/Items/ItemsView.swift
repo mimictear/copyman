@@ -1,3 +1,4 @@
+import Storage
 import SwiftUI
 import AnticsUI
 import SwiftData
@@ -7,13 +8,13 @@ struct ItemsView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(Theme.self) private var theme
     
-    @Query private var items: [Item]
+    @Query private var items: [ItemModel]
     
     @State private var routerPath = RouterPath()
     @State private var showingCopiedAlert = false
     @State private var searchText = ""
     
-    var filteredItems: [Item] {
+    var filteredItems: [ItemModel] {
         if searchText.isEmpty {
             return items
         } else {
@@ -172,5 +173,5 @@ struct ItemsView: View {
 
 #Preview {
     ItemsView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: ItemModel.self, inMemory: true)
 }

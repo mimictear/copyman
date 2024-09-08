@@ -1,4 +1,5 @@
 import Core
+import Storage
 import SwiftUI
 import AnticsUI
 
@@ -8,7 +9,7 @@ struct ItemRowContextMenu: View {
     @Environment(\.openWindow) private var openWindow
     @Environment(ItemViewModel.self) private var viewModel
     
-    let item: Item
+    let item: ItemModel
     
     var body: some View {
         Button {
@@ -35,7 +36,7 @@ struct ItemRowContextMenu: View {
         Divider()
         
         Button {
-            viewModel.dispatch(event: .edit)
+            viewModel.dispatch(event: .edit(item: item))
         } label: {
             Label("Edit", systemImage: "pencil")
         }

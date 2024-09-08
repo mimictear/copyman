@@ -1,4 +1,5 @@
 import Core
+import Storage
 import SwiftUI
 import AnticsUI
 
@@ -11,7 +12,7 @@ struct ItemView: View {
     @State private var viewModel = ItemViewModel()
     @State private var revealSensitiveContent = false
     
-    let item: Item
+    let item: ItemModel
     @Binding var copied: Bool
     
     // TODO: Create a coordinator to manage all context menu actions
@@ -122,8 +123,8 @@ struct ItemView: View {
         }
         .onChange(of: viewModel.event) { _, event in
             switch event {
-            case .edit:
-                routerPath.presentedSheet = .edit
+            case let .edit(item):
+                routerPath.presentedSheet = .edit(item)
             case let .pinOrUnpin(item):
                 HapticManager.shared.fireHaptic(.buttonPress)
                 item.pinned.toggle()

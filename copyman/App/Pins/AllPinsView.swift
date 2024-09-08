@@ -1,3 +1,4 @@
+import Storage
 import SwiftUI
 import AnticsUI
 import SwiftData
@@ -7,10 +8,10 @@ struct AllPinsView: View {
     
     @State private var showingCopiedAlert = false
     
-    @Query(filter: #Predicate<Item> {
+    @Query(filter: #Predicate<ItemModel> {
         $0.pinned
     })
-    private var pinnedItems: [Item]
+    private var pinnedItems: [ItemModel]
     
     var body: some View {
         ClosableSheet {

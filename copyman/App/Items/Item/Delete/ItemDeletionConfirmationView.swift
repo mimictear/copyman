@@ -1,8 +1,9 @@
+import Storage
 import SwiftUI
 import AnticsUI
 
 struct ItemDeletionConfirmationView: View {
-    let item: Item
+    let item: ItemModel
     let action: () -> Void
     
     var body: some View {

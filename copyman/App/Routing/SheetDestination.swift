@@ -1,10 +1,11 @@
+import Storage
 import Foundation
 
 enum SheetDestination: Identifiable {
     case settings
     case add
+    case edit(ItemModel)
     case addNewTag
-    case edit
     case pins
     case filter
     
@@ -12,8 +13,8 @@ enum SheetDestination: Identifiable {
         switch self {
         case .settings: "sheet.settings"
         case .add: "sheet.add"
-        case .addNewTag: "sheet.addNewTag"
         case .edit: "sheet.edit"
+        case .addNewTag: "sheet.addNewTag"
         case .pins: "sheet.pins"
         case .filter: "sheet.filter"
         }

@@ -1,16 +1,16 @@
 import SwiftData
 import Foundation
 
-public typealias TagModel = SchemaV1.TagModel
+public typealias TagModel = SchemaV1.Tag
 
 extension SchemaV1 {
     @Model
-    public final class TagModel {
+    final public class Tag {
         var title: String?
-        var items: [ItemModel]?
+        var items: [Item]?
         var timestamp: Date = Date.now
         
-        init(title: String?, items: [ItemModel]?, timestamp: Date = .now) {
+        init(title: String?, items: [Item]?, timestamp: Date = .now) {
             self.title = title
             self.items = items
             self.timestamp = timestamp

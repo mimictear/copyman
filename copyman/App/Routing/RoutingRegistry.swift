@@ -10,9 +10,10 @@ extension View {
                 switch destination {
                 case .settings: SettingsView()
                 case .add: AddItemSheet()
+                case let .edit(item): EditItemSheet(item: item)
                 case .addNewTag: AddNewTagView()
                 case .pins: AllPinsView()
-                case .filter, .edit: EmptyView()
+                case .filter: EmptyView()
                 }
             }
         }

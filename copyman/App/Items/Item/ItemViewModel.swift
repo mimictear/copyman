@@ -1,11 +1,12 @@
+import Storage
 import SwiftUI
 import Foundation
 
 enum ItemAction: Equatable {
     case idle
-    case edit
+    case edit(item: ItemModel)
     case copy(content: String)
-    case pinOrUnpin(item: Item)
+    case pinOrUnpin(item: ItemModel)
     case delete
 }
 
